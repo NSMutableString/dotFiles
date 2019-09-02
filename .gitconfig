@@ -1,0 +1,32 @@
+[user]
+        name = Bram Huenaerts
+        email = bram@chronux.be
+[core]
+        excludesfile = /Users/bramhuenaerts/.gitignore_global
+        editor = vim
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[merge]
+        ff = only
+[mergetool "sourcetree"]
+        cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[commit]
+        template = /Users/bramhuenaerts/.stCommitMsg
+
+[alias]
+    co = checkout
+    p = !git push --set-upstream ${1-origin} HEAD
+    s = status --branch
+    l = !"git short-log"
+    ll = !"git long-log"
+    lla = !"git log-with-author"
+    fp = !"git push origin HEAD --force-with-lease"
+    pp = !"git push origin HEAD"
+    url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
+
+    short-log = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C($
+    long-log = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''    $
+    log-with-author = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(commi$
+    fuckit = !"git clean -d -f && git reset --hard"
