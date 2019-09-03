@@ -34,3 +34,12 @@ eval "$(rbenv init -)"
 # Set the GOPATH for the dev package manager so we can support dep ensure -v
 export GOPATH=/Users/bramhuenaerts/Documents/go
 export PATH=$GOPATH/bin:$PATH
+
+# Hide computername for current user to have cleaner terminal path
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context)
