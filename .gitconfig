@@ -1,20 +1,19 @@
 [user]
-        name = Bram Huenaerts
-        email = bram@chronux.be
+    name = Bram Huenaerts
+    email = bram@chronux.be
 [core]
-        excludesfile = /Users/bramhuenaerts/.gitignore_global
-        editor = vim
+    excludesfile = /Users/bramhuenaerts/.gitignore_global
+    editor = vim
 [difftool "sourcetree"]
-        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-        path =
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
 [merge]
-        ff = only
+    ff = only
 [mergetool "sourcetree"]
-        cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-        trustExitCode = true
+    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [commit]
-        template = /Users/bramhuenaerts/.stCommitMsg
-
+    template = /Users/bramhuenaerts/.stCommitMsg
 [alias]
     co = checkout
     p = !git push --set-upstream ${1-origin} HEAD
