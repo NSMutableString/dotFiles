@@ -35,6 +35,10 @@ eval "$(rbenv init -)"
 export GOPATH=/Users/bramhuenaerts/Documents/go
 export PATH=$GOPATH/bin:$PATH
 
+# Ruby exports (This tells gem to place its gems within the user’s home folder, not in a system-wide location)
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+
 # Hide computername for current user to have cleaner terminal path
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
