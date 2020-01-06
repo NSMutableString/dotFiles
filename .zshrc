@@ -24,9 +24,6 @@ alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias gocoverage='go test -coverprofile=coverage.out;go tool cover -html=coverage.out'
 alias xcdd='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias ls='ls -allG'
-alias gitl='git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C($
-alias gitfu='git reset --hard origin/master'
-alias gitrefresh='git fetch origin'
 
 # Set the rbenv
 eval "$(rbenv init -)"
