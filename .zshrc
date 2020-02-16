@@ -21,16 +21,11 @@ source $ZSH/oh-my-zsh.sh
 #
 alias doc='cd ~/documents'
 alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1'
-alias gocoverage='go test -coverprofile=coverage.out;go tool cover -html=coverage.out'
 alias xcdd='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias ls='ls -allG'
 
 # Set the rbenv
 eval "$(rbenv init -)"
-
-# Set the GOPATH for the dev package manager so we can support dep ensure -v
-export GOPATH=/Users/bramhuenaerts/Documents/go
-export PATH=$GOPATH/bin:$PATH
 
 # Ruby exports (This tells gem to place its gems within the user’s home folder, not in a system-wide location)
 export GEM_HOME=$HOME/gems
