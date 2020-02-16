@@ -23,6 +23,7 @@ alias doc='cd ~/documents'
 alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias xcdd='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias ls='ls -allG'
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
 # Set the rbenv
 eval "$(rbenv init -)"
