@@ -39,3 +39,13 @@ prompt_context() {
 }
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context)
+
+# Open XCode workspace or project with latest version
+xc() {
+  myarray=(`find ./ -maxdepth 1 -name "*.xcworkspace"`)
+  if [ ${#myarray[@]} -gt 0 ]; then
+    open -a "/Applications/Xcode.app" *.xcworkspace
+  else
+    open -a "/Applications/Xcode.app" *.xcodeproj
+  fi
+}
